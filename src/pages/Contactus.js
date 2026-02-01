@@ -14,7 +14,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 const Contactus = () => {
     const theme = useTheme();
     return (
-        <Box sx={{ bgcolor: theme.palette.background.default, minHeight: '70vh', width: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+        <Box id="contact-section" sx={{ bgcolor: theme.palette.background.default, minHeight: '70vh', width: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
             <Box
                 sx={{
                     flex: 1,
@@ -22,7 +22,7 @@ const Contactus = () => {
                     flexDirection: 'column',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    pt: { xs: theme.spacing(8), md: theme.spacing(12) },
+                    pt: { xs: theme.spacing(16), md: theme.spacing(20) },
                     pb: { xs: theme.spacing(4), md: theme.spacing(8) },
                 }}
             >

@@ -1,9 +1,13 @@
-import React from "react";
-import { Box, Container, Typography } from "@mui/material";
+import React, { useRef } from "react";
+import { Box, Container, Typography, IconButton } from "@mui/material";
 import bg from '../assets/herosec-bg.svg';
 import SplitText from "../reactbits/SplitText";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import InstagramIcon from '@mui/icons-material/Instagram';
 
 // Initialize AOS
 AOS.init({
@@ -17,12 +21,21 @@ const handleAnimationComplete = () => {
 };
 
 const Hero = () => {
+  const aboutSectionRef = useRef(null);
+
+  const scrollToAbout = () => {
+    const aboutSection = document.getElementById('about-section');
+    if (aboutSection) {
+      aboutSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
   return (
     <Box
       sx={{
-        minHeight: "120vh",
+        minHeight: {xs:"70vh", md:"120vh"},
         display: "flex",
         alignItems: "center",
+        position: 'relative',
         // backgroundColor: "background.default",
         // py: 8,
       }}
@@ -35,7 +48,7 @@ const Hero = () => {
             data-aos-delay="100"
             sx={{
               fontFamily: "Mohave",
-              fontSize: "96px",
+              fontSize: {xs:"55px", md:"96px"},
               fontWeight: 600,
               lineHeight: 1,
               background:
@@ -53,7 +66,7 @@ const Hero = () => {
             data-aos-delay="200"
             sx={{
               fontFamily: "Mohave",
-              fontSize: "96px",
+              fontSize: {xs:"55px", md:"96px"},
               fontWeight: 600,
               lineHeight: 1,
               background:
@@ -71,7 +84,7 @@ const Hero = () => {
             data-aos-delay="300"
             sx={{
              fontFamily: "Mohave",
-              fontSize: "96px",
+              fontSize: {xs:"55px", md:"96px"},
               fontWeight: 600,
               lineHeight: 1,
               mb: 2,
@@ -97,6 +110,75 @@ const Hero = () => {
           </Typography>
         </Box>
       </Container>
+
+      {/* Scroll Down Indicator */}
+      <Box
+        onClick={scrollToAbout}
+        sx={{
+          position: 'absolute',
+          bottom: { xs: 50, md: 70 },
+          left: '50%',
+          transform: 'translateX(-50%)',
+          cursor: 'pointer',
+        }}
+      >
+        <Typography
+          variant="body2"
+          sx={{
+            color: 'text.secondary',
+            fontSize: { xs: '0.875rem', md: '1rem' },
+            fontWeight: 500,
+            textAlign: 'center',
+          }}
+        >
+          Scroll Down
+        </Typography>
+      </Box>
+
+      {/* Social Media Icons - Far Right End */}
+      <Box
+        sx={{
+          position: 'absolute',
+          bottom: { xs: 50, md: 70 },
+          right: { xs: 20, md: 40 },
+          display: 'flex',
+          alignItems: 'center',
+          gap: 2,
+        }}
+      >
+        <IconButton
+          sx={{
+            backgroundColor: 'rgba(255, 255, 255, 0.1)',
+            color: 'primary.main',
+          }}
+        >
+          <FacebookIcon />
+        </IconButton>
+        <IconButton
+          sx={{
+            backgroundColor: 'rgba(255, 255, 255, 0.1)',
+            color: 'primary.main',
+          }}
+        >
+          <TwitterIcon />
+        </IconButton>
+        <IconButton
+          sx={{
+            backgroundColor: 'rgba(255, 255, 255, 0.1)',
+            color: 'primary.main',
+          }}
+        >
+          <LinkedInIcon />
+        </IconButton>
+        <IconButton
+          sx={{
+            backgroundColor: 'rgba(255, 255, 255, 0.1)',
+            color: 'primary.main',
+          }}
+        >
+          <InstagramIcon />
+        </IconButton>
+      </Box>
     </Box>
   );
 };

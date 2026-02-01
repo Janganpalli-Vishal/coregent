@@ -129,7 +129,7 @@ const Services = () => {
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
   return (
-    <Container maxWidth="xl" sx={{ py: 8 }}>
+    <Container id="services-section" maxWidth="xl" sx={{ pt: { xs: 12, md: 16 }, pb: 8 }}>
       {/* ================= Heading ================= */}
       <Box textAlign="center" mb={8}>
         <Typography
@@ -138,7 +138,7 @@ const Services = () => {
           variant="h3"
           sx={{
             fontFamily: "Mohave",
-            // fontSize: { xs: "", md: "h2" },
+            fontSize: { xs: "44px", md: "h3" },
             fontWeight: 500,
             color: "primary.main",
             lineHeight: 1.2,

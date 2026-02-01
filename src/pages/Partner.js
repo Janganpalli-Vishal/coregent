@@ -33,12 +33,13 @@ const partners = [
 const Partner = () => {
 	const theme = useTheme();
 	return (
-		<Container maxWidth="xl"
+		<Container id="partner-section" maxWidth="xl"
 			sx={{
 				bgcolor: theme.palette.background.default,
 				width: '100%',
                  backgroundColor:'transparent',
-                 py: 8,
+                 pt: { xs: 12, md: 16 },
+                 pb: 8,
 			}}
 		>
 			<Grid container alignItems="center" spacing={2} sx={{ position: 'relative', zIndex: 1 }}>

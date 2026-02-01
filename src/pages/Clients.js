@@ -47,10 +47,11 @@ const testimonials = [
 const Clients = () => {
   const theme = useTheme();
   return (
-    <Container maxWidth="xl" sx={{
+    <Container id="clients-section" maxWidth="xl" sx={{
       // background: theme.palette.background.default,
       minHeight: '100vh',
-      py: 8,
+      pt: { xs: 12, md: 16 },
+      pb: 8,
       // py: { xs: 6, md: 10 },
       // px: { xs: 2, md: 0 },
     }}>
@@ -63,7 +64,7 @@ const Clients = () => {
             fontWeight: theme.typography.h3.fontWeight,
             color: theme.palette.primary.main,
             fontFamily: theme.typography.h3.fontFamily,
-            fontSize: { xs: '2rem', md: theme.typography.h3.fontSize },
+            fontSize: { xs: '44px', md: theme.typography.h3.fontSize },
             lineHeight: theme.typography.h3.lineHeight,
           }}
         >

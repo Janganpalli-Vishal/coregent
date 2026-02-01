@@ -48,7 +48,7 @@ const Blog = () => {
   const theme = useTheme();
   return (
     <Box>
-      <Container maxWidth="xl" sx={{ py: 12 }}>
+      <Container id="blog-section" maxWidth="xl" sx={{ pt: { xs: 12, md: 16 }, pb: 12 }}>
         <Box textAlign="center" mb={8}>
           <Typography
             data-aos="fade-up"

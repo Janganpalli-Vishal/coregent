@@ -26,7 +26,7 @@ function App() {
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
           backgroundSize: "cover",
-          px: 4,
+          px:{xs:0, md:4},
           position: 'relative',
         }}>
           <Hero />
