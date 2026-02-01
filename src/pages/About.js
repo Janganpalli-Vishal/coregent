@@ -45,7 +45,7 @@ AOS.init({
 
 const About = () => {
   return (
-    <Container maxWidth="xl" sx={{ pt: 4, pb:10 }}>
+    <Container maxWidth="xl" sx={{ pb:10 }}>
       <Box>
         <Grid container spacing={6} alignItems="center">
           {/* LEFT SECTION */}

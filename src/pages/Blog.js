@@ -106,18 +106,18 @@ const Blog = () => {
                   data-aos="fade-up"
                   data-aos-delay={300 + (index * 100)}
                   sx={{
-                    border: '1px solid #E0E0E0',
-                    borderRadius: 2,
+                    borderLeft: '1px solid #E0E0E0',
+                    // borderRadius: 2,
                     p: 3,
                     height: '300px',
                     display: 'flex',
                     flexDirection: 'column',
                     position: 'relative',
                     transition: 'all 0.3s ease',
-                    '&:hover': {
-                      boxShadow: '0 4px 20px rgba(0,0,0,0.1)',
-                      transform: 'translateY(-2px)'
-                    }
+                    // '&:hover': {
+                    //   boxShadow: '0 4px 20px rgba(0,0,0,0.1)',
+                    //   transform: 'translateY(-2px)'
+                    // }
                   }}
                 >
                   {/* Yellow accent bar */}

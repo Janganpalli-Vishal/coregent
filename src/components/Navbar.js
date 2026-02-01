@@ -20,15 +20,15 @@ const menuItems = [
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const isScrolled = window.scrollY > 50;
-      setScrolled(isScrolled);
-    };
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     const isScrolled = window.scrollY > 50;
+  //     setScrolled(isScrolled);
+  //   };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  // //   window.addEventListener('scroll', handleScroll);
+  // //   return () => window.removeEventListener('scroll', handleScroll);
+  // }, []);
 
   return (
     <Box
@@ -67,6 +67,7 @@ const Navbar = () => {
               px: 5,
               py: 2,
               backdropFilter: 'blur(10px)',
+              border:'1px solid lightgrey'
             }}
           >
             <Stack direction="row" spacing={4}>

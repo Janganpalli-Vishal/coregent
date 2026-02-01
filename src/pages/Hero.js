@@ -20,11 +20,10 @@ const Hero = () => {
   return (
     <Box
       sx={{
-        minHeight: "90vh",
+        minHeight: "120vh",
         display: "flex",
         alignItems: "center",
         // backgroundColor: "background.default",
-        
         // py: 8,
       }}
     >
