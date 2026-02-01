@@ -43,7 +43,7 @@ const theme = createTheme({
      Typography System
   ========================= */
   typography: {
-    fontFamily: `"Lexend", "Mohave", sans-serif`,
+    fontFamily: `"Mohave", "Mohave", sans-serif`,
 
     /* HERO / DISPLAY */
     h1: {
@@ -64,7 +64,7 @@ const theme = createTheme({
 
     h3: {
       fontFamily: "Mohave",
-      fontSize: "42px",
+      fontSize: "48px",
       fontWeight: 500,
       lineHeight: 1.2,
       color: "#011C75",
@@ -72,7 +72,7 @@ const theme = createTheme({
 
     h4: {
       fontFamily: "Mohave",
-      fontSize: "28px",
+      fontSize: "32px",
       fontWeight: 500,
       lineHeight: 1.3,
       color: "#011C75",
@@ -80,7 +80,7 @@ const theme = createTheme({
 
     /* SECTION TITLES */
     h5: {
-      fontFamily: "Lexend",
+      fontFamily: "Mohave",
       fontSize: "26px",
       fontWeight: 400,
       lineHeight: 1.4,
@@ -89,7 +89,7 @@ const theme = createTheme({
 
     /* BODY TEXT */
     body1: {
-      fontFamily: "Lexend",
+      fontFamily: "Mohave",
       fontSize: "20px",
       fontWeight: 400,
       lineHeight: 1.6,
@@ -97,71 +97,21 @@ const theme = createTheme({
     },
 
     body2: {
-      fontFamily: "Lexend",
+      fontFamily: "Mohave",
       fontSize: "18px",
       fontWeight: 400,
-      lineHeight: 1.6,
+      lineHeight: 1.2,
       color: "#97A1C0",
     },
 
     button: {
-      fontFamily: "Lexend",
+      fontFamily: "Mohave",
       fontSize: "16px",
       fontWeight: 500,
       textTransform: "none",
     },
   },
 
-  /* =========================
-     Component Overrides
-  ========================= */
-  components: {
-    MuiButton: {
-      styleOverrides: {
-        root: {
-          borderRadius: "10px",
-          padding: "12px 24px",
-        },
-        containedPrimary: {
-          backgroundColor: "#011C75",
-          color: "#FFFFFF",
-          "&:hover": {
-            backgroundColor: "#00155A",
-          },
-        },
-        containedSecondary: {
-          backgroundColor: "#FFCF23",
-          color: "#000000",
-          "&:hover": {
-            backgroundColor: "#FFB623",
-          },
-        },
-      },
-    },
-
-    MuiCard: {
-      styleOverrides: {
-        root: {
-          borderRadius: "16px",
-          boxShadow: "0 10px 30px rgba(0,0,0,0.08)",
-        },
-      },
-    },
-
-    MuiTypography: {
-      defaultProps: {
-        variantMapping: {
-          h1: "h1",
-          h2: "h2",
-          h3: "h3",
-          h4: "h4",
-          h5: "h5",
-          body1: "p",
-          body2: "p",
-        },
-      },
-    },
-  },
 });
 
 export default theme;
