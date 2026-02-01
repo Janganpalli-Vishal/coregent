@@ -12,6 +12,7 @@ import Partner from './pages/Partner';
 import Contactus from './pages/Contactus';
 import Clients from './pages/Clients';
 import Blog from './pages/Blog';
+// Import Swiper styles
 
 function App() {
   return (

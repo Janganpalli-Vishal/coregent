@@ -87,7 +87,7 @@ const Trust = () => {
 				</Grid>
 				<Grid size={{xs:12, md:6}} display={'flex'} justifyContent={'end'} alignContent={'center'}>
 					<Box
-						data-aos="fade-left"
+						data-aos="fade-down"
 						data-aos-delay="200"
 						sx={{
 							width: '100%',
@@ -108,8 +108,7 @@ const Trust = () => {
 									xs={1}
                                     size={{xs:1}}
 									key={stat.label}
-									data-aos="zoom-in"
-									data-aos-delay={300 + (i * 100)}
+									
 									sx={{
 										borderRight: i % 2 === 0 ? `1.5px solid ${theme.palette.divider}` : 'none',
 										borderBottom: i < 2 ? `1.5px solid ${theme.palette.divider}` : 'none',
