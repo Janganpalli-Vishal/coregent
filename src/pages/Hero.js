@@ -32,7 +32,7 @@ const Hero = () => {
   return (
     <Box
       sx={{
-        minHeight: {xs:"70vh", md:"120vh"},
+        minHeight: {xs:"90vh", md:"120vh"},
         display: "flex",
         alignItems: "center",
         position: 'relative',

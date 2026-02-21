@@ -11,44 +11,41 @@ import {
   ListItem,
   useMediaQuery
 } from "@mui/material";
+import { Link, useLocation } from 'react-router-dom';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import logo from "../assets/coregent-logo.svg";
 import theme from "../config/theme";
 
 const menuItems = [
-  { name: "Solutions", id: "services-section" },
-  { name: "About us", id: "about-section" },
-  { name: "Clients", id: "clients-section" },
-  { name: "Blogs", id: "blog-section" },
-  { name: "Portfolio", id: "partner-section" },
+  { name: "Home", path: "/" },
+  { name: "About", path: "/about" },
+  { name: "Client", path: "/client" },
+  { name: "Contact", path: "/contact" },
 ];
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
+  const location = useLocation();
 
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     const isScrolled = window.scrollY > 50;
-  //     setScrolled(isScrolled);
-  //   };
+  useEffect(() => {
+    const handleScroll = () => {
+      const isScrolled = window.scrollY > 50;
+      setScrolled(isScrolled);
+    };
 
-  //   window.addEventListener('scroll', handleScroll);
-  //   return () => window.removeEventListener('scroll', handleScroll);
-  // }, []);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
 
-  const scrollToSection = (sectionId) => {
-    const section = document.getElementById(sectionId);
-    if (section) {
-      section.scrollIntoView({ behavior: 'smooth' });
-      setMobileOpen(false); // Close mobile drawer after clicking
-    }
+  const isActiveRoute = (path) => {
+    return location.pathname === path;
   };
 
   const drawer = (
@@ -75,15 +72,18 @@ const Navbar = () => {
           <ListItem key={item.name} sx={{ py: 1 }}>
             <Typography
               variant="body1"
+              component={Link}
+              to={item.path}
               sx={{
                 cursor: "pointer",
                 fontWeight: 500,
                 width: '100%',
+                color: isActiveRoute(item.path) ? theme.palette.primary.main : theme.palette.text.primary,
+                textDecoration: 'none',
                 "&:hover": {
-                  color: "primary.main",
+                  color: theme.palette.primary.main,
                 },
               }}
-              onClick={() => scrollToSection(item.id)}
             >
               {item.name}
             </Typography>
@@ -92,15 +92,16 @@ const Navbar = () => {
         <ListItem sx={{ mt: 2 }}>
           <Button
             variant="contained"
-            fullWidth
+            component={Link}
+            to="/contact"
             sx={{
               px: 2,
               py: 1.5,
               fontWeight: 600,
               color: "secondary.main",
               borderRadius: "0px",
+              textDecoration: 'none'
             }}
-            onClick={() => scrollToSection('contact-section')}
           >
             Contact Now
           </Button>
@@ -117,8 +118,8 @@ const Navbar = () => {
         left: 0,
         right: 0,
         zIndex: 1000,
-        backgroundColor: scrolled ? 'rgba(255, 255, 255, 0.95)' : 'transparent',
-        backdropFilter: scrolled ? 'blur(10px)' : 'none',
+        backgroundColor: scrolled ? 'none' : 'transparent',
+        // backdropFilter: scrolled ? 'blur(10px)' : 'none',
         transition: 'all 0.3s ease',
       }}
     >
@@ -147,7 +148,7 @@ const Navbar = () => {
                 px: { xs: 3, md: 5 },
                 py: 2,
                 backdropFilter: 'blur(10px)',
-                border:'1px solid lightgrey'
+                border: '1px solid lightgrey'
               }}
             >
               <Stack direction="row" spacing={{ xs: 2, md: 4 }}>
@@ -155,15 +156,18 @@ const Navbar = () => {
                   <Typography
                     key={item.name}
                     variant="body2"
+                    component={Link}
+                    to={item.path}
                     sx={{
                       cursor: "pointer",
                       fontWeight: 500,
                       fontSize: { xs: '0.75rem', md: '0.875rem' },
+                      color: isActiveRoute(item.path) ? theme.palette.primary.main : theme.palette.text.primary,
+                      textDecoration: 'none',
                       "&:hover": {
-                        color: "primary.main",
+                        color: theme.palette.primary.main,
                       },
                     }}
-                    onClick={() => scrollToSection(item.id)}
                   >
                     {item.name}
                   </Typography>
@@ -177,6 +181,8 @@ const Navbar = () => {
             <Box>
               <Button
                 variant="contained"
+                component={Link}
+                to="/contact"
                 sx={{
                   px: { xs: 2, md: 4.5 },
                   py: 1.5,
@@ -184,8 +190,8 @@ const Navbar = () => {
                   color: "secondary.main",
                   borderRadius: "0px",
                   fontSize: { xs: '0.875rem', md: '1rem' },
+                  textDecoration: 'none'
                 }}
-                onClick={() => scrollToSection('contact-section')}
               >
                 Contact Now
               </Button>

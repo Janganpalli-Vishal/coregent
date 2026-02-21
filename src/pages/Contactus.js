@@ -1,5 +1,7 @@
 
-import React from 'react';
+import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
@@ -13,9 +15,16 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 const Contactus = () => {
     const theme = useTheme();
+    useEffect(() => {
+        AOS.init({
+            duration: 1000,
+            once: true,
+        });
+    }, []);
     return (
         <Box id="contact-section" sx={{ bgcolor: theme.palette.background.default, minHeight: '70vh', width: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
             <Box
+                data-aos="fade-up"
                 sx={{
                     flex: 1,
                     display: 'flex',
@@ -29,6 +38,7 @@ const Contactus = () => {
                 <Typography
                     variant="h3"
                     align="center"
+                    data-aos="fade-right"
                     sx={{
                         ...theme.typography.h3,
                         color: theme.palette.primary.main,
@@ -43,6 +53,7 @@ const Contactus = () => {
                 <Typography
                     variant="h3"
                     align="center"
+                    data-aos="fade-left"
                     sx={{
                         ...theme.typography.h3,
                         color: theme.palette.warning.main,
@@ -57,6 +68,7 @@ const Contactus = () => {
                 <Typography
                     variant="body2"
                     align="center"
+                    data-aos="fade-up"
                     sx={{
                         ...theme.typography.body2,
                         color: theme.palette.text.secondary,
@@ -68,7 +80,7 @@ const Contactus = () => {
                 >
                     Share your vision with us, and together we’ll build intelligent, scalable solutions that shape what’s next.
                 </Typography>
-                <Stack direction={{ xs: 'column', sm: 'row' }} spacing={4} sx={{ mt: theme.spacing(2), mb: theme.spacing(2) }}>
+                <Stack direction={{ xs: 'column', sm: 'row' }} spacing={4} sx={{ mt: theme.spacing(2), mb: theme.spacing(2) }} data-aos="zoom-in">
                     <Button
                         variant="outlined"
                         sx={{
@@ -82,6 +94,10 @@ const Contactus = () => {
                             textTransform: 'none',
                             minWidth: 180,
                             boxShadow: 'none',
+                            '&:hover': {
+                            	bgcolor: theme.palette.primary.main,
+                            	color: theme.palette.warning.main,
+                            },
 
                         }}
                     >
@@ -110,7 +126,7 @@ const Contactus = () => {
                     </Button>
                 </Stack>
             </Box>
-            <Box sx={{ width: '100%', mt: 'auto' }}>
+            <Box sx={{ width: '100%', mt: 'auto' }} data-aos="fade-up">
                 <Divider
                     sx={{
                         my: theme.spacing(4),

@@ -24,27 +24,27 @@ const services = [
   {
     icon: b1,
     title: "Mobile Application Development",
-    desc: "We build custom Android and iOS applications.",
+    desc: "We build custom Android and iOS applications tailored to your business needs. With a strong focus on performance, security, and usability, Coregent delivers apps that align with your goals and your users.",
   },
   {
     icon: b2,
     title: "Website & Web App Development",
-    desc: "We build conversion-focused websites.",
+    desc: "We build websites that are not just visually appealing, but strategically designed to engage users and convert traffic.",
   },
   {
     icon: b3,
     title: "UI UX Designing & Graphic Designing",
-    desc: "Thoughtful UI/UX designs that convert.",
+    desc: "We create thoughtful UI/UX designs for websites and mobile apps that improve usability, engagement, and conversions.",
   },
   {
     icon: b4,
     title: "Digital Marketing & Ad Campaign",
-    desc: "Data-driven marketing strategies.",
+    desc: "At Coregent, we build data-driven digital marketing strategies that help your brand reach the right audience at the right time.",
   },
   {
     icon: b2,
     title: "Website & Web App Development",
-    desc: "High-performing web solutions.",
+    desc: "Proactive, secure, and responsive IT support designed to keep your business running without interruptions.",
   },
   
 ];
@@ -111,14 +111,14 @@ const Blog = () => {
           onSwiper={(swiper) => (swiperRef.current = swiper)}
           onProgress={handleSwiperProgress}
           modules={[Autoplay]}
-          slidesPerView={3}
+          slidesPerView={3.5}
           loop={true}
           spaceBetween={24}
-          autoplay={{
-            delay: 3000,
-            disableOnInteraction: false,
-            pauseOnMouseEnter: true,
-          }}
+          // autoplay={{
+          //   delay: 3000,
+          //   disableOnInteraction: false,
+          //   pauseOnMouseEnter: true,
+          // }}
           breakpoints={{
             0: { slidesPerView: 1.1 },
             768: { slidesPerView: 2.1 },
@@ -142,7 +142,7 @@ const Blog = () => {
                   data-aos-delay={200 + index * 100}
                   sx={{
                     position: "absolute",
-                    left: 0,
+                    left: -2,
                     top: `${24  * ((index + 1) * 2.1)}px`,
                     width: 4,
                     height: 40,
@@ -159,7 +159,7 @@ const Blog = () => {
                     borderRadius: 2,
                     display: "flex",
                     alignItems: "center",
-                    justifyContent: "center",
+                    justifyContent: "left",
                     mb: 3,
                   }}
                 >
@@ -172,6 +172,7 @@ const Blog = () => {
                     fontWeight: 600,
                     color: theme.palette.primary.main,
                     mb: 1,
+                    maxWidth:310
                   }}
                 >
                   {serv.title}

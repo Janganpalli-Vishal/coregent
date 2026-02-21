@@ -90,7 +90,7 @@ const theme = createTheme({
     /* BODY TEXT */
     body1: {
       fontFamily: "Mohave",
-      fontSize: "20px",
+      fontSize: "18px",
       fontWeight: 400,
       lineHeight: 1.6,
       color: "#000000",
