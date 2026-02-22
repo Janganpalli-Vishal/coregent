@@ -1,12 +1,16 @@
 import React from "react";
 import { Box, Container, Typography, Grid } from "@mui/material";
 
-import bl1 from "../assets/bl1.svg";
-import bl2 from "../assets/bl2.svg";
+import bl1 from "../assets/blue1.svg";
+import bl2 from "../assets/blue2.svg";
 import green1 from "../assets/gr1.svg";
 import green2 from "../assets/gr2.svg";
-import yellow1 from "../assets/yellow1.png";
+import yellow1 from "../assets/yellow1.svg";
 import yellow2 from "../assets/yellow2.svg";
+
+import pc1 from "../assets/pc1.svg";
+import pc2 from "../assets/pc2.svg";
+import pc3 from "../assets/pc3.svg";
 
 const PartneringSection = () => {
   return (
@@ -49,33 +53,21 @@ const PartneringSection = () => {
         <Grid container spacing={8} alignItems="flex-start">
 
           {/* ========= COLUMN 1 ========= */}
-          <Grid size={{ xs: 12, md: 4 }} sx={{ display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center' }}>
-            <Box sx={{
-              position: "relative", mb: 6, width: 320,        // FIXED WIDTH
-              height: 140,
-            }}>
-              <Box
-                sx={{
-                  transform: 'rotate(-2deg)',
-                  transition: 'transform 0.3s ease',
-                  '&:hover': {
-                    transform: 'rotate(-1deg)'
-                  }
-                }}
-              >
-                <img src={bl1} />
-              </Box>
-              <Box
-                sx={{
-                  transform: 'rotate(2deg)',
-                  transition: 'transform 0.3s ease',
-                  '&:hover': {
-                    transform: 'rotate(1deg)'
-                  }
-                }}
-              >
-                <img src={bl2} />
-              </Box>
+          <Grid
+            size={{ xs: 12, md: 4 }}
+            sx={{ display: "flex", justifyContent: "center", flexDirection: "column", alignItems: "center" }}
+          >
+            <Box sx={{ mb: 2.5 }}>
+              <img
+                src={pc1}
+              // width="220"
+              // style={{ transform: "rotate(-3deg)", display: "block", margin: "0 auto" }}
+              />
+              {/* <img
+        src={bl2}
+        width="240"
+        style={{ transform: "rotate(3deg)", display: "block", margin: "12px auto 0" }}
+      /> */}
             </Box>
 
             <Typography sx={{ fontSize: "18px", lineHeight: 1.8 }}>
@@ -86,33 +78,21 @@ const PartneringSection = () => {
           </Grid>
 
           {/* ========= COLUMN 2 ========= */}
-          <Grid size={{ xs: 12, md: 4 }} sx={{ display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center' }}>
-            <Box sx={{
-             mb: 6, width: 320,        // FIXED WIDTH
-              height: 140,
-            }}>
-              <Box
-                sx={{
-                  transform: 'rotate(-2deg)',
-                  transition: 'transform 0.3s ease',
-                  '&:hover': {
-                    transform: 'rotate(-1deg)'
-                  }
-                }}
-              >
-                <img src={green1} />
-              </Box>
-              <Box
-                sx={{
-                  transform: 'rotate(2deg)',
-                  transition: 'transform 0.3s ease',
-                  '&:hover': {
-                    transform: 'rotate(1deg)'
-                  }
-                }}
-              >
-                <img src={green2} />
-              </Box>
+          <Grid
+            size={{ xs: 12, md: 4 }}
+            sx={{ display: "flex", justifyContent: "center", flexDirection: "column", alignItems: "center" }}
+          >
+            <Box sx={{ mb: 6 }}>
+              <img
+                src={pc2}
+                width="340"
+              // style={{ transform: "rotate(-3deg)", display: "block", margin: "0 auto" }}
+              />
+              {/* <img
+        src={green2}
+        width="340"
+        style={{ transform: "rotate(3deg)", display: "block", margin: "12px auto 0" }}
+      /> */}
             </Box>
 
             <Typography sx={{ fontSize: "18px", lineHeight: 1.8 }}>
@@ -123,43 +103,21 @@ const PartneringSection = () => {
           </Grid>
 
           {/* ========= COLUMN 3 ========= */}
-          <Grid size={{ xs: 12, md: 4 }}>
-            <Box sx={{ position: "relative", mb: 6 }}>
-
-              <Box
-                sx={{
-                  backgroundImage: `url(${yellow1})`,
-                  backgroundSize: "100% 100%",
-                  backgroundRepeat: "no-repeat",
-                  backgroundPosition: "center",
-                  height: 80,
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  fontWeight: 700,
-                  color: "#001C75",
-                }}
-              >
-                {/* BUILT FOR CONFIDENT */}
-              </Box>
-
-              <Box
-                sx={{
-                  backgroundImage: `url(${yellow2})`,
-                  backgroundSize: "100% 100%",
-                  backgroundRepeat: "no-repeat",
-                  backgroundPosition: "center",
-                  height: 70,
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  fontWeight: 700,
-                  color: "#001C75",
-                  mt: -2,
-                }}
-              >
-                {/* DECISION-MAKING */}
-              </Box>
+          <Grid
+            size={{ xs: 12, md: 4 }}
+            sx={{ display: "flex", justifyContent: "center", flexDirection: "column", alignItems: "center" }}
+          >
+            <Box sx={{ mb: 6 }}>
+              <img
+                src={pc3}
+                width="320"
+              // style={{ transform: "rotate(3deg)", display: "block", margin: "0 auto" }}
+              />
+              {/* <img
+        src={yellow2}
+        width="260"
+        style={{ transform: "rotate(-3deg)", display: "block", margin: "12px auto 0" }}
+      /> */}
             </Box>
 
             <Typography sx={{ fontSize: "18px", lineHeight: 1.8 }}>

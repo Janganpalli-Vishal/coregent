@@ -12,7 +12,7 @@ const ClientHero = () => {
         <div>
             <Box
                 sx={{
-                    minHeight: { xs: "70vh", md: "110vh" },
+                    minHeight: { xs: "100vh", md: "110vh" },
                     display: "flex",
                     alignItems: "center",
                     position: 'relative',

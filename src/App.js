@@ -8,6 +8,8 @@ import ContactSection from './pages/ContactSection';
 import HomeSection from './pages/HomeSection';
 import AboutSection from './pages/AboutSection';
 import ClientsSection from './pages/Clients/ClientsSection';
+import SolutionsMain from './pages/Solutions/SolutionsMain';
+import Contactus from './pages/Contactus';
 
 function App() {
   return (
@@ -22,7 +24,10 @@ function App() {
             <Route path="/about" element={<AboutSection />} />
             <Route path="/client" element={<ClientsSection />} />
             <Route path="/contact" element={<ContactSection />} />
+            <Route path="/solutions" element={<SolutionsMain />} />
           </Routes>
+
+          <Contactus/>
         </div>
       </Router>
     </ThemeProvider>

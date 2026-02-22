@@ -70,7 +70,7 @@ const AboutPage = () => {
     }, []);
 
     return (
-        <Box>
+        <Box sx={{backgroundColor:"#f5f6fb"}}> 
             <Box
                 sx={{
                     minHeight: { xs: "90vh", md: "110vh" },

@@ -6,7 +6,7 @@ import { Box } from '@mui/material'
 
 const ClientsSection = () => {
   return (
-    <Box >
+    <Box sx={{backgroundColor:"#f5f6fb"}}>
         <ClientHero/>
         <Box sx={{ px:{xs:0, md:4}}}>
           <ClientAppreciate/>

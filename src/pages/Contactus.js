@@ -22,7 +22,7 @@ const Contactus = () => {
         });
     }, []);
     return (
-        <Box id="contact-section" sx={{ bgcolor: theme.palette.background.default, minHeight: '70vh', width: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+        <Box id="contact-section" sx={{ backgroundColor:"#f5f6fb", minHeight: '70vh', width: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
             <Box
                 data-aos="fade-up"
                 sx={{
@@ -38,7 +38,7 @@ const Contactus = () => {
                 <Typography
                     variant="h3"
                     align="center"
-                    data-aos="fade-right"
+                    data-aos="fade-up"
                     sx={{
                         ...theme.typography.h3,
                         color: theme.palette.primary.main,
@@ -53,7 +53,7 @@ const Contactus = () => {
                 <Typography
                     variant="h3"
                     align="center"
-                    data-aos="fade-left"
+                    data-aos="fade-up"
                     sx={{
                         ...theme.typography.h3,
                         color: theme.palette.warning.main,

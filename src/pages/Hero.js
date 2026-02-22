@@ -116,7 +116,7 @@ const Hero = () => {
         onClick={scrollToAbout}
         sx={{
           position: 'absolute',
-          bottom: { xs: 50, md: 70 },
+          bottom: { xs: 0, md: 70 },
           left: '50%',
           transform: 'translateX(-50%)',
           cursor: 'pointer',

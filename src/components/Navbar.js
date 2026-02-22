@@ -20,6 +20,7 @@ import theme from "../config/theme";
 const menuItems = [
   { name: "Home", path: "/" },
   { name: "About", path: "/about" },
+  { name: "Solutions", path: "/solutions" },
   { name: "Client", path: "/client" },
   { name: "Contact", path: "/contact" },
 ];
@@ -69,7 +70,7 @@ const Navbar = () => {
       </Box>
       <List>
         {menuItems.map((item) => (
-          <ListItem key={item.name} sx={{ py: 1 }}>
+          <ListItem key={item.name} sx={{ py: 1, px:0 }}>
             <Typography
               variant="body1"
               component={Link}
@@ -89,14 +90,14 @@ const Navbar = () => {
             </Typography>
           </ListItem>
         ))}
-        <ListItem sx={{ mt: 2 }}>
+        <ListItem sx={{ mt: 1, px:0 }}>
           <Button
             variant="contained"
             component={Link}
             to="/contact"
             sx={{
               px: 2,
-              py: 1.5,
+              // py: 1.5,
               fontWeight: 600,
               color: "secondary.main",
               borderRadius: "0px",
@@ -215,7 +216,7 @@ const Navbar = () => {
 
       {/* ================= Mobile Drawer ================= */}
       <Drawer
-        anchor="left"
+        anchor="right"
         open={mobileOpen}
         onClose={handleDrawerToggle}
         ModalProps={{
