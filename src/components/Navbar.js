@@ -45,6 +45,11 @@ const Navbar = () => {
     setMobileOpen(!mobileOpen);
   };
 
+  const handleNavClick = (path) => {
+    setMobileOpen(false); // Close drawer
+    window.scrollTo(0, 0); // Scroll to top
+  };
+
   const isActiveRoute = (path) => {
     return location.pathname === path;
   };
@@ -75,6 +80,7 @@ const Navbar = () => {
               variant="body1"
               component={Link}
               to={item.path}
+              onClick={() => handleNavClick(item.path)}
               sx={{
                 cursor: "pointer",
                 fontWeight: 500,
@@ -95,6 +101,7 @@ const Navbar = () => {
             variant="contained"
             component={Link}
             to="/contact"
+            onClick={() => handleNavClick('/contact')}
             sx={{
               px: 2,
               // py: 1.5,
@@ -159,6 +166,7 @@ const Navbar = () => {
                     variant="body2"
                     component={Link}
                     to={item.path}
+                    onClick={() => window.scrollTo(0, 0)}
                     sx={{
                       cursor: "pointer",
                       fontWeight: 500,
@@ -184,6 +192,7 @@ const Navbar = () => {
                 variant="contained"
                 component={Link}
                 to="/contact"
+                onClick={() => window.scrollTo(0, 0)}
                 sx={{
                   px: { xs: 2, md: 4.5 },
                   py: 1.5,

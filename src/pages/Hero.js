@@ -30,12 +30,13 @@ const Hero = () => {
     }
   };
   return (
-    <Box
+   <Box>
+     <Box
       sx={{
-        minHeight: {xs:"90vh", md:"120vh"},
+        minHeight: {xs:"90vh", md:"92vh"},
         display: "flex",
         alignItems: "center",
-        position: 'relative',
+        // position: 'relative',
         // backgroundColor: "background.default",
         // py: 8,
       }}
@@ -111,13 +112,18 @@ const Hero = () => {
         </Box>
       </Container>
 
-      {/* Scroll Down Indicator */}
-      <Box
+    </Box>
+
+    <Container maxWidth="xl" sx={{display:'flex',  alignItems:"center",justifyContent:{xs:"center", md:"space-between"}, flexDirection:{xs:"column", md:"row"}}}>
+      <Box sx={{width:300, display:{xs:"none", md:"block"}}}>
+
+      </Box>
+       <Box
         onClick={scrollToAbout}
         sx={{
           position: 'absolute',
-          bottom: { xs: 0, md: 70 },
-          left: '50%',
+          bottom: { xs: 50, md: 10 },
+          left: '48%',
           transform: 'translateX(-50%)',
           cursor: 'pointer',
         }}
@@ -134,11 +140,9 @@ const Hero = () => {
           Scroll Down
         </Typography>
       </Box>
-
-      {/* Social Media Icons - Far Right End */}
       <Box
         sx={{
-          position: 'absolute',
+          // position: 'absolute',
           bottom: { xs: 50, md: 70 },
           right: { xs: 20, md: 40 },
           display: 'flex',
@@ -179,7 +183,8 @@ const Hero = () => {
           <InstagramIcon />
         </IconButton>
       </Box>
-    </Box>
+    </Container>
+   </Box>
   );
 };
 

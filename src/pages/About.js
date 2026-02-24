@@ -32,7 +32,7 @@
 
 import { Box, Container, Grid, Typography } from "@mui/material";
 import React from "react";
-import aboutImg from "../assets/about.png";
+import aboutImg from "../assets/aboutvideo.mp4";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -81,8 +81,11 @@ const About = () => {
             {/* Image with decorative accent */}
             <Box data-aos="fade-up" data-aos-delay="300" sx={{ position: "relative", width: "fit-content" }}>
               <Box
-                component="img"
+                component="video"
                 src={aboutImg}
+                autoPlay
+                loop
+                muted
                 alt="About Coregent"
                 sx={{
                   width: "100%",
