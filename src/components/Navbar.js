@@ -11,7 +11,7 @@ import {
   ListItem,
   useMediaQuery
 } from "@mui/material";
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import logo from "../assets/coregent-logo.svg";
@@ -30,6 +30,7 @@ const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
   const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -140,7 +141,13 @@ const Navbar = () => {
           }}
         >
           {/* ================= Logo ================= */}
-          <Box sx={{ display: "flex", alignItems: "center" }}>
+          <Box 
+            onClick={() => {
+              navigate('/');
+              window.scrollTo(0, 0);
+            }}
+            sx={{ display: "flex", alignItems: "center", cursor: "pointer" }}
+          >
             <img
               src={logo}
               alt="Coregent Logo"

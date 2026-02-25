@@ -30,11 +30,13 @@
 
 
 
-import { Box, Container, Grid, Typography } from "@mui/material";
 import React from "react";
+import { useNavigate } from "react-router-dom";
+import { Box, Container, Grid, Typography } from "@mui/material";
 import aboutImg from "../assets/aboutvideo.mp4";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+
 
 // Initialize AOS
 AOS.init({
@@ -43,7 +45,10 @@ AOS.init({
   offset: 100
 });
 
+
+
 const About = () => {
+  const navigate = useNavigate()
   return (
     <Container id="about-section" maxWidth="xl" sx={{ pt: { xs: 12, md: 16 }, pb:10 }}>
       <Box>
@@ -131,6 +136,10 @@ const About = () => {
               data-aos="fade-up"
               data-aos-delay="500"
               variant="body2"
+              onClick={() => {
+                navigate('/about');
+                window.scrollTo(0, 0);
+              }}
               sx={{
                 color: "primary.main",
                 fontWeight: 500,

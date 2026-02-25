@@ -31,28 +31,28 @@ const SolutionsSwiper = () => {
       title: "Web site Development",
       description:
         "At Greeklancer, we build high-performance, user-friendly websites tailored to your business goals. Whether you need a web site.",
-      link: "/web-development",
+      link: "#",
     },
     {
       image: appImg,
       title: "Mobile app Development",
       description:
         "We craft intuitive and scalable mobile apps that bring your ideas to life. Whether it’s iOS, Android, or cross-platform development.",
-      link: "/mobile-app-development",
+      link: "#",
     },
     {
       image: webImg,
       title: "Backend Development",
       description:
         "Boost your product with secure, fast, and scalable backend solutions tailored to your app’s architecture and user demands.",
-      link: "/dev-support",
+      link: "#",
     },
     {
       image: appImg,
       title: "UI/UX Design",
       description:
         "Engaging, user-first interfaces that drive conversions and create memorable digital experiences for your users.",
-      link: "/ui-ux-design",
+      link: "#",
     },
   ];
 
@@ -189,7 +189,10 @@ const SolutionsSwiper = () => {
                   data-aos-duration={`${1000 + 50 * index}`}
                   data-aos-delay={`${300 + 150 * index}`}
                   data-aos-offset={`${200 + 10 * index}`}
-                  onClick={() => navigate(item.link)}
+                  onClick={() => {
+                    navigate(item.link);
+                    window.scrollTo(0, 0);
+                  }}
                 >
                   <CardContent
                     sx={{
@@ -215,7 +218,13 @@ const SolutionsSwiper = () => {
                     >
                       {item.description}
                     </Typography>
-                    <Button sx={{ color: "primary.main", mt: 2 }}>
+                    <Button 
+                      onClick={() => {
+                        navigate(item.link);
+                        window.scrollTo(0, 0);
+                      }}
+                      sx={{ color: "primary.main", mt: 2 }}
+                    >
                       Read more{" "}
                       <ArrowForwardRoundedIcon
                         fontSize="small"

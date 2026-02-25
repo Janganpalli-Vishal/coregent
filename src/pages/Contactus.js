@@ -10,11 +10,13 @@ import { useTheme } from '@mui/material/styles';
 import Divider from '@mui/material/Divider';
 import Link from '@mui/material/Link';
 import FacebookIcon from '@mui/icons-material/Facebook';
+import { useNavigate } from "react-router-dom";
 import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 const Contactus = () => {
     const theme = useTheme();
+    const navigate = useNavigate();
     useEffect(() => {
         AOS.init({
             duration: 1000,
@@ -104,6 +106,10 @@ const Contactus = () => {
                         Download Quote
                     </Button>
                     <Button
+                        onClick={() => {
+                          navigate('/contact');
+                          window.scrollTo(0, 0);
+                        }}
                         variant="contained"
                         sx={{
                             bgcolor: theme.palette.primary.main,
