@@ -167,6 +167,10 @@ const Hero = () => {
           <TwitterIcon />
         </IconButton>
         <IconButton
+          component="a"
+          href="https://www.linkedin.com/in/coregent-technologies/"
+          target="_blank"
+          rel="noopener noreferrer"
           sx={{
             backgroundColor: 'rgba(255, 255, 255, 0.1)',
             color: 'primary.main',
@@ -175,6 +179,10 @@ const Hero = () => {
           <LinkedInIcon />
         </IconButton>
         <IconButton
+          component="a"
+          href="https://www.instagram.com/coregent_technologies/"
+          target="_blank"
+          rel="noopener noreferrer"
           sx={{
             backgroundColor: 'rgba(255, 255, 255, 0.1)',
             color: 'primary.main',
